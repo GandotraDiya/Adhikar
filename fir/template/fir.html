@@ -1,0 +1,15 @@
+<h2>Submit FIR</h2>
+<form action="{% url 'submit_fir' %}" method="post">
+  {% csrf_token %}
+  
+  <label>Name:</label><br>
+  <input type="text" name="name" required><br><br>
+
+  <label>Description:</label><br>
+  <textarea name="desc" required></textarea><br><br>
+
+  <label>IPFS Hash (optional):</label><br>
+  <input type="text" name="ipfs"><br><br>
+
+  <button type="submit">Submit FIR</button>
+</form>
